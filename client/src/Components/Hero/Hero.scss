@@ -1,0 +1,128 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/button" as *;
+@use "../../styles/link" as *;
+
+.hero {
+  height: 900px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    padding: 110px 0 0 0;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+    }
+
+    // @media (max-width: 900px) {
+    //   flex-direction: column;
+    // }
+
+    @include vp-767 {
+      gap: 30px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+    gap: 20px;
+    margin: 0;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0;
+    }
+
+    &-title {
+      position: relative;
+      color: transparent;
+      font-size: var(--f-size-h1);
+      opacity: 0;
+      animation: text .5s linear 1s forwards;
+
+      @include vp-767 {
+        font-size: var(--f-size-h1-mobile);
+      }
+    }
+
+    &-title::before {
+      background: linear-gradient(var(--c-purple) 65%, var(--c-white) 90%);
+    }
+
+    &-title::after {
+      background: linear-gradient(
+        var(--c-purple) 65%,
+        var(--c-jaguar-dark) 90%
+      );
+      opacity: 0;
+      transition: opacity var(--transition-200) $delay-02;
+    }
+
+    &-title::before,
+    &-title::after {
+      content: attr(data-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: absolute;
+      inset: 0;
+    }
+
+    &-desc {
+      font-size: var(--f-size-h2);
+      transition: color var(--transition-200) $delay-02;
+      color: var(--c-white);
+      opacity: 0;
+      animation: text .5s linear 1.5s forwards;
+    }
+
+    &-title,
+    &-desc {
+      font-weight: var(--fw-regular);
+      line-height: var(--lh-54);
+      line-height: 62px;
+      margin: 0;
+
+      @media (max-width: 900px) {
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+    &-link {
+      opacity: 0;
+      animation: text .5s linear 2s forwards;
+    }
+  }
+
+  &__animation {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

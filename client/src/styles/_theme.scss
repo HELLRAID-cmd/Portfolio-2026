@@ -1,0 +1,186 @@
+@use "../styles/variables" as *;
+
+html {
+  transition: background-color var(--transition-200) $delay-02,
+    color var(--transition-200) $delay-02;
+  background-color: var(--c-light-gray);
+
+  &.light {
+    .button {
+      box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
+      color: var(--c-jaguar-dark);
+
+      &.ant-btn-default.ant-btn-default:hover {
+        box-shadow: 2px 3px 4px -2px var(--c-white);
+      }
+    }
+
+    .link {
+      box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
+      color: var(--c-jaguar-dark);
+    }
+
+    .header {
+      background-color: var(--c-light-gray);
+
+      &__icon {
+        color: var(--c-jaguar-dark);
+
+        &:hover {
+          color: var(--c-purple);
+        }
+
+        &:focus-visible {
+          color: var(--c-purple);
+        }
+      }
+
+      &__burger {
+        &-btn {
+          border-color: var(--c-purple);
+
+          &::before,
+          &::after {
+            background-color: var(--c-purple);
+          }
+        }
+      }
+
+      &__drawer {
+        .ant-drawer {
+          &-close span {
+            color: var(--c-white);
+          }
+
+          &-body a {
+            color: var(--c-white);
+          }
+        }
+      }
+
+      &__menu-item-link {
+        color: var(--c-jaguar-dark);
+
+        &:hover {
+          color: var(--c-purple);
+        }
+
+        &:focus-visible {
+          color: var(--c-purple);
+        }
+      }
+
+      &__theme {
+        background-color: var(--c-jaguar-dark);
+        transition: box-shadow var(--transition-200) $delay-02;
+
+        &::before {
+          content: "";
+          box-shadow: unset;
+          box-shadow: -10px 0 10px -5px var(--c-sun-yellow);
+          transition: box-shadow var(--transition-200);
+        }
+
+        &-icon-star {
+          transform: translateX(-13px);
+          color: var(--c-white);
+          transition: transform var(--transition-200);
+        }
+      }
+    }
+
+    .hero {
+      &__wrapper {
+        &-link {
+          box-shadow: 0 0 10px -2px var(--c-jaguar-dark);
+
+          &-arrow {
+            color: var(--c-jaguar-dark);
+          }
+        }
+      }
+
+      .hero__text {
+        &-title::before,
+        &-title::after {
+          transition: opacity var(--transition-200) $delay-02;
+        }
+
+        &-title::before {
+          opacity: 0;
+        }
+
+        &-title::after {
+          opacity: 1;
+        }
+
+        &-desc {
+          color: var(--c-jaguar-dark);
+        }
+      }
+    }
+
+    .animation {
+      &-title {
+        color: var(--c-jaguar-dark);
+        transition: color var(--transition-200) .2s;
+      }
+
+      &-link {
+        color: var(--c-jaguar-dark);
+        transition: box-shadow var(--transition-200), color var(--transition-200) .2s;
+
+        &:hover,
+        &:focus-visible {
+          box-shadow: 0 0 10px -3px var(--c-purple);
+          color: var(--c-purple);
+        }
+      }
+
+      &-logo {
+        &__name {
+          transition: color var(--transition-200) .2s;
+          color: var(--c-jaguar-dark);
+        }
+      }
+    }
+
+    .about {
+      &__card {
+        &-timeline-desc {
+          color: var(--c-jaguar-dark);
+          transition: color var(--transition-200) $delay-02;
+        }
+      }
+
+      .ant {
+        &-card {
+          background-color: var(--c-white-50);
+          box-shadow: 0 0 10px -3px var(--c-jaguar-dark);
+          transition: transform var(--transition-200),
+            box-shadow var(--transition-200),
+            background-color var(--transition-200) $delay-02;
+        }
+      }
+    }
+
+    .project {
+      &__card {
+        background-color: var(--c-white-50);
+        box-shadow: 0 0 10px -3px var(--c-jaguar-dark);
+        transition: transform var(--transition-200),
+          box-shadow var(--transition-200),
+          background-color var(--transition-200) $delay-02;
+
+        &-info {
+          background-color: var(--c-white);
+          transition: background-color var(--transition-200) $delay-02,
+            opacity var(--transition-200) $delay-02;
+        }
+      }
+    }
+  }
+  &.dark {
+    background-color: var(--c-jaguar-dark);
+  }
+}
