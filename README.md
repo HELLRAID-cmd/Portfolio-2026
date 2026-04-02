@@ -27,7 +27,7 @@
 ```bash
 
 # Скопировать проект
-git clone https://github.com/HELLRAID-cmd/Portfolio.git
+git clone https://github.com/HELLRAID-cmd/Portfolio-2026.git
 
 # Перейти в папку client
 cd client
