@@ -35,6 +35,7 @@ a.link {
   font-size: var(--f-size-h3);
   color: var(--c-white);
   cursor: pointer;
+  text-decoration: underline !important;
   transition: box-shadow var(--transition-200),
     border-color var(--transition-200), color var(--transition-200);
 

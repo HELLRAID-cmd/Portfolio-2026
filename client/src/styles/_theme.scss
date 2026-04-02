@@ -1,7 +1,8 @@
 @use "../styles/variables" as *;
 
 html {
-  transition: background-color var(--transition-200) $delay-02,
+  transition:
+    background-color var(--transition-200) $delay-02,
     color var(--transition-200) $delay-02;
   background-color: var(--c-light-gray);
 
@@ -15,11 +16,16 @@ html {
       }
     }
 
+    .text-theme {
+      color: var(--c-jaguar-dark);
+    }
+
     .link {
       box-shadow: -2px -3px 4px -2px var(--c-jaguar-dark);
       color: var(--c-jaguar-dark);
     }
 
+    // Header
     .header {
       background-color: var(--c-light-gray);
 
@@ -89,6 +95,7 @@ html {
       }
     }
 
+    // Hero
     .hero {
       &__wrapper {
         &-link {
@@ -120,15 +127,18 @@ html {
       }
     }
 
+    // Animation
     .animation {
       &-title {
         color: var(--c-jaguar-dark);
-        transition: color var(--transition-200) .2s;
+        transition: color var(--transition-200) 0.2s;
       }
 
       &-link {
         color: var(--c-jaguar-dark);
-        transition: box-shadow var(--transition-200), color var(--transition-200) .2s;
+        transition:
+          box-shadow var(--transition-200),
+          color var(--transition-200) 0.2s;
 
         &:hover,
         &:focus-visible {
@@ -139,43 +149,55 @@ html {
 
       &-logo {
         &__name {
-          transition: color var(--transition-200) .2s;
+          transition: color var(--transition-200) 0.2s;
           color: var(--c-jaguar-dark);
         }
       }
     }
 
+    // About
     .about {
       &__card {
+        &-card {
+          background-color: var(--c-white-50);
+          box-shadow: 0 0 10px -3px var(--c-jaguar-dark);
+          transition:
+            transform var(--transition-200),
+            box-shadow var(--transition-200),
+            background-color var(--transition-200) $delay-02;
+        }
+
         &-timeline-desc {
           color: var(--c-jaguar-dark);
           transition: color var(--transition-200) $delay-02;
         }
       }
-
-      .ant {
-        &-card {
-          background-color: var(--c-white-50);
-          box-shadow: 0 0 10px -3px var(--c-jaguar-dark);
-          transition: transform var(--transition-200),
-            box-shadow var(--transition-200),
-            background-color var(--transition-200) $delay-02;
-        }
-      }
     }
 
+    // Project
     .project {
       &__card {
         background-color: var(--c-white-50);
         box-shadow: 0 0 10px -3px var(--c-jaguar-dark);
-        transition: transform var(--transition-200),
+        transition:
+          transform var(--transition-200),
           box-shadow var(--transition-200),
           background-color var(--transition-200) $delay-02;
 
         &-info {
           background-color: var(--c-white);
-          transition: background-color var(--transition-200) $delay-02,
+          transition:
+            background-color var(--transition-200) $delay-02,
             opacity var(--transition-200) $delay-02;
+        }
+      }
+    }
+
+    // Footer
+    .footer {
+      &__social {
+        &-icon {
+          color: var(--c-jaguar-dark);
         }
       }
     }

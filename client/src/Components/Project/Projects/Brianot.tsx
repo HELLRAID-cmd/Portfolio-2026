@@ -6,7 +6,7 @@ const Briaton = () => {
     <Card className="project__card project__card--briaton">
       <div className="project__card-info project-hidden">
         <h3 className="project__card-info-title">Briaton Final Work</h3>
-        <span className="project__card-info-date">22.05.2025</span>
+        <span className="project__card-info-date text-theme">22.05.2025</span>
       </div>
       <picture className="project__card-picture">
         <source
@@ -23,19 +23,19 @@ const Briaton = () => {
       </picture>
       <div className="project__card-inner">
         <a
-          className="project__card-inner-title link-title"
+          className="project__card-inner-title link-title text-theme"
           href="https://github.com/HELLRAID-cmd/Briaton---finalWork"
           target="_blank"
         >
           Briaton Final Work
         </a>
         <div className="project__card-text">
-          <p className="project__card-text-desc">
+          <p className="project__card-text-desc text-theme">
             The final assignment for the Skillbox courses includes
             an&nbsp;online store of&nbsp;various types of&nbsp;chandeliers.
             Rewritten in&nbsp;TS + React.
           </p>
-          <p className="project__card-text-technologies">
+          <p className="project__card-text-technologies text-theme">
             Technologies: React, TS, Scss, Vite, Just Validate.
           </p>
         </div>

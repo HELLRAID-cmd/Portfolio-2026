@@ -1,15 +1,15 @@
 import { useAnimated } from "../UseHook/useAnimated";
 import { skills } from "./About-skills";
-import { Card, Timeline } from "antd";
+import { Timeline } from "antd";
 
 export const Cards = () => {
   useAnimated(".about__card-card");
   useAnimated(".ant-timeline-item");
 
   return (
-    <>
+    <div className="about__card-inner">
       {skills.map((group, i) => (
-        <Card key={i} className="about__card-card">
+        <div key={i} className="about__card-card">
           <Timeline
             classNames={{
               itemIcon: "about__card-timeline-line",
@@ -33,8 +33,8 @@ export const Cards = () => {
               content: <p className="about__card-timeline-desc">{item.desc}</p>,
             }))}
           ></Timeline>
-        </Card>
+        </div>
       ))}
-    </>
+    </div>
   );
 };

@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .footer {
   box-shadow: 0 0 10px -1px var(--c-black);
 
@@ -25,6 +27,7 @@
   }
 
   &__social {
+    
     &-list {
       display: flex;
       gap: 20px;
@@ -40,6 +43,11 @@
       &:hover {
         color: var(--c-purple);
       }
+    }
+
+    &-icon {
+      color: var(--c-white);
+      transition: var(--transition-200) $delay-02;
     }
   }
 }
