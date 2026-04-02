@@ -6,7 +6,7 @@ const Monster = () => {
     <Card className="project__card project__card--monster">
       <div className="project__card-info project-hidden">
         <h3 className="project__card-info-title">Tap-Tap-MonsterHunter</h3>
-        <span className="project__card-info-date">22.12.2025</span>
+        <span className="project__card-info-date text-theme">22.12.2025</span>
       </div>
       <picture className="project__card-picture">
         <source
@@ -23,19 +23,19 @@ const Monster = () => {
       </picture>
       <div className="project__card-inner">
         <a
-          className="project__card-inner-title link-title"
+          className="project__card-inner-title link-title text-theme"
           href="https://github.com/HELLRAID-cmd/Tap-Tap-MonsterHunter"
           target="_blank"
         >
           Tap-Tap-MonsterHunter
         </a>
         <div className="project__card-text">
-          <p className="project__card-text-desc">
+          <p className="project__card-text-desc text-theme">
             A&nbsp;short tapping game inspired by&nbsp;Tap Titans&nbsp;2. You
             can play the game in&nbsp;the standard mode or&nbsp;try the demo
             mode. After defeating the final opponent, you can view your stats.
           </p>
-          <p className="project__card-text-technologies">
+          <p className="project__card-text-technologies text-theme">
             Technologies: React, TS, Scss, Vite, Antd.
           </p>
         </div>

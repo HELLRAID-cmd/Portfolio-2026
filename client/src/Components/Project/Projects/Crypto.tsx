@@ -6,7 +6,7 @@ const Crypto = () => {
     <Card className="project__card project__card--crypto">
       <div className="project__card-info project-hidden">
         <h3 className="project__card-info-title">Crypto Project</h3>
-        <span className="project__card-info-date">22.08.2025</span>
+        <span className="project__card-info-date text-theme text-theme">22.08.2025</span>
       </div>
       <picture className="project__card-picture">
         <source
@@ -23,19 +23,19 @@ const Crypto = () => {
       </picture>
       <div className="project__card-inner">
         <a
-          className="project__card-inner-title link-title"
+          className="project__card-inner-title link-title text-theme"
           href="https://github.com/HELLRAID-cmd/ProjectCrypt"
           target="_blank"
         >
           Crypto Project
         </a>
         <div className="project__card-text">
-          <p className="project__card-text-desc">
+          <p className="project__card-text-desc text-theme">
             A&nbsp;small app for practicing working with state and calculations.
             The user can &laquo;buy&raquo; cryptocurrency at&nbsp;any price and
             quantity, and then track how much he&nbsp;earned or&nbsp;lost.
           </p>
-          <p className="project__card-text-technologies">
+          <p className="project__card-text-technologies text-theme">
             Technologies: React, TS, Scss, Vite, Antd.
           </p>
         </div>

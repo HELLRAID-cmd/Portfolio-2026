@@ -6,7 +6,7 @@ const Stage = () => {
     <Card className="project__card project__card--monster">
       <div className="project__card-info project-hidden">
         <h3 className="project__card-info-title">Stage Task</h3>
-        <span className="project__card-info-date">31.03.2026</span>
+        <span className="project__card-info-date text-theme">31.03.2026</span>
       </div>
       <picture className="project__card-picture">
         <source
@@ -23,19 +23,19 @@ const Stage = () => {
       </picture>
       <div className="project__card-inner">
         <a
-          className="project__card-inner-title link-title"
+          className="project__card-inner-title link-title text-theme"
           href="https://github.com/HELLRAID-cmd/StageTask"
           target="_blank"
         >
           Stage Task
         </a>
         <div className="project__card-text">
-          <p className="project__card-text-desc">
+          <p className="project__card-text-desc text-theme">
             A&nbsp;task tracking app similar to&nbsp;Trello. It&nbsp;allows you
             to&nbsp;create projects with tasks, which are saved
             in&nbsp;LocalStorage.
           </p>
-          <p className="project__card-text-technologies">
+          <p className="project__card-text-technologies text-theme">
             Technologies: React, TS, Scss, Vite, Antd, Bootstrap, dnd-kit, html2canvas.
           </p>
         </div>
