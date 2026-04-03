@@ -5,7 +5,7 @@ const Monster = () => {
   return (
     <Card className="project__card project__card--monster">
       <div className="project__card-info project-hidden">
-        <h3 className="project__card-info-title">Tap-Tap-MonsterHunter</h3>
+        <h3 className="project__card-info-title">Tap-Tap MonsterHunter</h3>
         <span className="project__card-info-date text-theme">22.12.2025</span>
       </div>
       <picture className="project__card-picture">
