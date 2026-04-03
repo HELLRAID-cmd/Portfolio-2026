@@ -1,0 +1,38 @@
+@use "./mixins" as *;
+
+.ant {
+  &-drawer {
+    &-header {
+      background-color: var(--c-jaguar-dark);
+    }
+
+    &-body {
+      background-color: var(--c-jaguar-dark);
+    }
+  }
+
+  &-card {
+    &-body {
+      display: grid;
+      grid-template-columns: minmax(300px, 452px) 1fr;
+      align-items: center;
+      padding: 30px;
+      gap: 30px;
+
+      @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+        height: 100%;
+      }
+
+      &:hover .project-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

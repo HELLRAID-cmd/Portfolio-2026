@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .footer {
   box-shadow: 0 0 10px -1px var(--c-black);
@@ -17,6 +18,10 @@
     font-size: var(--f-size-h4);
     color: var(--c-purple);
     margin: 0;
+
+    @include vp-767 {
+      font-size: var(--f-size-18);
+    }
   }
 
   &__wrapper {
