@@ -9,7 +9,7 @@
     flex-direction: column;
     gap: 40px;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -58,6 +58,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       position: absolute;
       gap: 10px;
       width: 100%;
@@ -190,25 +191,8 @@
 
     .ant-card {
       &-body {
-        display: grid;
-        grid-template-columns: minmax(300px, 452px) 1fr;
-        align-items: center;
-        padding: 30px;
-        gap: 30px;
-
-        @media (max-width: 1000px) {
-          grid-template-columns: 1fr;
-          height: 100%;
-        }
-
-        &:hover .project-hidden {
-          opacity: 0;
-          pointer-events: none;
-        }
-
-        &::before,
-        &::after {
-          display: none;
+        @include vp-767 {
+          padding: 10px;
         }
       }
     }
